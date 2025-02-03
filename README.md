@@ -46,7 +46,16 @@ To remove all developer IPs from the security group:
   ```
   python3 remove_developer_ips.py
   ```
-  
+
+## Remote Access
+
+To access the Aurora instance from your local machine to run queries on the database use the following command:
+
+**NOTE**: Your IP address must be added to the security group protecting the Aurora DB or you will not be able to connect.
+
+  ```
+  psql -h <Aurora-Endpoint> -U <username> -d <database_name> -p 5432
+```  
 
 ## Ingest
 
